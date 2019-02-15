@@ -1,0 +1,21 @@
+time="2019-02-12 04:47:22" level=info msg="Set Default directories : 
+   - Exec: /opt/snmpcollector
+   - Config: /opt/snmpcollector/conf
+   -Logs: /opt/snmpcollector/log
+ -Home: 
+" 
+time="2019-02-12 04:47:22" level=debug msg="Database config: &{numChanges:0 Type:sqlite3 Host: Name:snmpcollector User: Password: SQLLogFile: Debug:0 x:<nil>}" 
+time="2019-02-12 04:47:22" level=warning msg="No Output default found influxdb devices found !!" 
+time="2019-02-12 04:47:22" level=debug msg="INFLUXDB2: map[default:0x13ee1a0]" 
+time="2019-02-12 04:47:22" level=info msg="Self monitoring TAGS inheritance set to : true" 
+time="2019-02-12 04:47:22" level=info msg="SELFMON enabled {Enabled:true Freq:60 Prefix: InheritDeviceTags:true ExtraTags:[instance=snmpcollector01]}" 
+time="2019-02-12 04:47:22" level=debug msg="--------------------Initializing Config metrics-------------------" 
+time="2019-02-12 04:47:22" level=debug msg="Initializing SNMPMetricconfig..." 
+time="2019-02-12 04:47:22" level=debug msg="Initializing MEASSUREMENTSconfig..." 
+time="2019-02-12 04:47:22" level=debug msg="-----------------------END Config metrics----------------------" 
+time="2019-02-12 04:47:22" level=info msg="SELFMON: Beginning  selfmonitor process for device" 
+time="2019-02-12 04:47:22" level=debug msg="Reseting Influxstats for DUMMY DB " 
+time="2019-02-12 04:47:22" level=info msg="setting HTML Static Path to public" 
+time="2019-02-12 04:47:22" level=info msg="Server is running on localhost:9090..." 
+time="2019-02-12 04:48:12" level=info msg="CONTEXT &{Context:0xc0002646c0 SignedInUser: Session:0xc000293f60 IsSignedIn:false}" 
+time="2019-02-12 04:48:22" level=debug msg="Reseting Influxstats for DUMMY DB " 

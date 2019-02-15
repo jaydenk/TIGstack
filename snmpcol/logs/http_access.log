@@ -1,0 +1,117 @@
+[Macaron] 2019-02-12 04:50:29: Started GET /sign-in for 192.168.112.1
+[Macaron] [1;31m2019-02-12 04:50:29: Completed /sign-in 404 Not Found in 909.2µs[0m
+[Macaron] 2019-02-12 04:50:33: Started GET /sign-in for 192.168.112.1
+[Macaron] [1;31m2019-02-12 04:50:33: Completed /sign-in 404 Not Found in 581.2µs[0m
+[Macaron] 2019-02-12 04:50:34: Started GET /api/rt/agent/info/version/ for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:50:34: Completed /api/rt/agent/info/version/ 200 OK in 1.0492ms[0m
+[Macaron] 2019-02-12 04:50:34: Started GET /api/rt/device/info for 192.168.112.1
+[Macaron] [4;31m2019-02-12 04:50:34: Completed /api/rt/device/info 403 Forbidden in 2.2842ms[0m
+[Macaron] 2019-02-12 04:50:34: Started GET /api/rt/agent/info/version/ for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:50:34: Completed /api/rt/agent/info/version/ 200 OK in 768.7µs[0m
+[Macaron] 2019-02-12 04:50:35: Started GET /api/rt/agent/info/version/ for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:50:35: Completed /api/rt/agent/info/version/ 200 OK in 1.0992ms[0m
+[Macaron] 2019-02-12 04:50:35: Started GET /api/rt/device/info for 192.168.112.1
+[Macaron] [4;31m2019-02-12 04:50:35: Completed /api/rt/device/info 403 Forbidden in 1.7859ms[0m
+[Macaron] 2019-02-12 04:50:35: Started GET /api/rt/agent/info/version/ for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:50:35: Completed /api/rt/agent/info/version/ 200 OK in 2.5266ms[0m
+[Macaron] 2019-02-12 04:50:53: Started POST /login for 192.168.112.1
+[Macaron] 2019-02-12 04:50:53: Completed /login 400 Bad Request in 2.0095ms
+[Macaron] 2019-02-12 04:51:03: Started POST /login for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:51:03: Completed /login 200 OK in 1.6411ms[0m
+[Macaron] 2019-02-12 04:51:03: Started GET /api/rt/agent/info/version/ for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:51:03: Completed /api/rt/agent/info/version/ 200 OK in 782.5µs[0m
+[Macaron] 2019-02-12 04:51:03: Started GET /api/rt/device/info for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:51:03: Completed /api/rt/device/info 200 OK in 1.1135ms[0m
+[Macaron] 2019-02-12 04:52:32: Started GET /api/cfg/influxservers for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:52:32: Completed /api/cfg/influxservers 200 OK in 14.5712ms[0m
+[Macaron] 2019-02-12 04:55:55: Started POST /api/cfg/influxservers for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:55:55: Completed /api/cfg/influxservers 200 OK in 17.3005ms[0m
+[Macaron] 2019-02-12 04:55:55: Started GET /api/cfg/influxservers for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:55:55: Completed /api/cfg/influxservers 200 OK in 6.4927ms[0m
+[Macaron] 2019-02-12 04:56:08: Started GET /api/rt/device/info for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:56:08: Completed /api/rt/device/info 200 OK in 872.2µs[0m
+[Macaron] 2019-02-12 04:57:50: Started GET /api/cfg/varcatalog for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:57:50: Completed /api/cfg/varcatalog 200 OK in 6.3401ms[0m
+[Macaron] 2019-02-12 04:57:52: Started GET /api/cfg/metric for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:57:52: Completed /api/cfg/metric 200 OK in 5.16ms[0m
+[Macaron] 2019-02-12 04:57:54: Started GET /api/cfg/varcatalog for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:57:54: Completed /api/cfg/varcatalog 200 OK in 9.3737ms[0m
+[Macaron] 2019-02-12 04:57:59: Started GET /api/cfg/varcatalog for 192.168.112.1
+[Macaron] [1;32m2019-02-12 04:57:59: Completed /api/cfg/varcatalog 200 OK in 4.717ms[0m
+[Macaron] 2019-02-12 05:00:05: Started GET /api/cfg/measurement for 192.168.112.1
+[Macaron] [1;32m2019-02-12 05:00:05: Completed /api/cfg/measurement 200 OK in 7.6723ms[0m
+[Macaron] 2019-02-13 23:05:10: Started GET /main.c6ef3fe3ad7bb0415f61.bundle.js for 172.18.0.1
+[Macaron] 2019-02-13 23:05:10: Started GET /styles.c96eefdd09645545344d.bundle.css for 172.18.0.1
+[Macaron] 2019-02-13 23:05:10: Started GET /scripts.4965831e99dffffd6684.bundle.js for 172.18.0.1
+[Macaron] [Static] Serving /styles.c96eefdd09645545344d.bundle.css
+[Macaron] [Static] Serving /main.c6ef3fe3ad7bb0415f61.bundle.js
+[Macaron] [Static] Serving /scripts.4965831e99dffffd6684.bundle.js
+[Macaron] [1;32m2019-02-13 23:05:10: Completed /styles.c96eefdd09645545344d.bundle.css 200 OK in 6.379437ms[0m
+[Macaron] [1;32m2019-02-13 23:05:10: Completed /scripts.4965831e99dffffd6684.bundle.js 200 OK in 8.20955ms[0m
+[Macaron] [1;32m2019-02-13 23:05:10: Completed /main.c6ef3fe3ad7bb0415f61.bundle.js 200 OK in 15.970798ms[0m
+[Macaron] 2019-02-13 23:05:10: Started GET /api/rt/agent/info/version/ for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:05:10: Completed /api/rt/agent/info/version/ 200 OK in 2.287572ms[0m
+[Macaron] 2019-02-13 23:05:10: Started GET /api/rt/device/info for 172.18.0.1
+[Macaron] [4;31m2019-02-13 23:05:10: Completed /api/rt/device/info 403 Forbidden in 2.909815ms[0m
+[Macaron] 2019-02-13 23:05:11: Started GET /api/rt/agent/info/version/ for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:05:11: Completed /api/rt/agent/info/version/ 200 OK in 768.32µs[0m
+[Macaron] 2019-02-13 23:08:09: Started POST /login for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:08:09: Completed /login 200 OK in 2.583801ms[0m
+[Macaron] 2019-02-13 23:08:09: Started GET /api/rt/agent/info/version/ for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:08:09: Completed /api/rt/agent/info/version/ 200 OK in 1.668418ms[0m
+[Macaron] 2019-02-13 23:08:09: Started GET /api/rt/device/info for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:08:09: Completed /api/rt/device/info 200 OK in 1.287419ms[0m
+[Macaron] 2019-02-13 23:23:59: Started GET /api/cfg/snmpdevice for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:23:59: Completed /api/cfg/snmpdevice 200 OK in 11.313202ms[0m
+[Macaron] 2019-02-13 23:24:03: Started GET /api/cfg/influxservers for 172.18.0.1
+[Macaron] 2019-02-13 23:24:03: Started GET /api/cfg/measgroup for 172.18.0.1
+[Macaron] 2019-02-13 23:24:03: Started GET /api/cfg/measfilters for 172.18.0.1
+[Macaron] 2019-02-13 23:24:03: Started GET /api/cfg/varcatalog for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:24:03: Completed /api/cfg/influxservers 200 OK in 6.428984ms[0m
+[Macaron] [1;32m2019-02-13 23:24:03: Completed /api/cfg/measgroup 200 OK in 7.420491ms[0m
+[Macaron] [1;32m2019-02-13 23:24:03: Completed /api/cfg/measfilters 200 OK in 8.384332ms[0m
+[Macaron] [1;32m2019-02-13 23:24:03: Completed /api/cfg/varcatalog 200 OK in 10.977283ms[0m
+[Macaron] 2019-02-13 23:52:20: Started POST /api/rt/agent/snmpconsole/ping/ for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:52:20: Completed /api/rt/agent/snmpconsole/ping/ 200 OK in 35.393325ms[0m
+[Macaron] 2019-02-13 23:57:49: Started POST /api/cfg/snmpdevice/ for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:57:49: Completed /api/cfg/snmpdevice/ 200 OK in 16.545642ms[0m
+[Macaron] 2019-02-13 23:57:49: Started GET /api/cfg/snmpdevice for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:57:49: Completed /api/cfg/snmpdevice 200 OK in 7.830553ms[0m
+[Macaron] 2019-02-13 23:58:03: Started GET /api/cfg/metric for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:58:03: Completed /api/cfg/metric 200 OK in 6.57872ms[0m
+[Macaron] 2019-02-13 23:58:05: Started POST /api/cfg/metric/convmodes/ for 172.18.0.1
+[Macaron] [1;32m2019-02-13 23:58:05: Completed /api/cfg/metric/convmodes/ 200 OK in 1.667391ms[0m
+[Macaron] 2019-02-14 00:05:57: Started GET /api/cfg/snmpdevice for 172.18.0.1
+[Macaron] [1;32m2019-02-14 00:05:57: Completed /api/cfg/snmpdevice 200 OK in 11.58415ms[0m
+[Macaron] 2019-02-14 00:06:09: Started POST /api/rt/agent/snmpconsole/ping/ for 172.18.0.1
+[Macaron] [1;32m2019-02-14 00:06:09: Completed /api/rt/agent/snmpconsole/ping/ 200 OK in 860.903816ms[0m
+[Macaron] 2019-02-14 01:36:55: Started GET /api/cfg/oidcondition for 172.18.0.1
+[Macaron] [1;32m2019-02-14 01:36:55: Completed /api/cfg/oidcondition 200 OK in 7.706821ms[0m
+[Macaron] 2019-02-14 01:36:56: Started GET /api/cfg/metric for 172.18.0.1
+[Macaron] [1;32m2019-02-14 01:36:56: Completed /api/cfg/metric 200 OK in 7.49673ms[0m
+[Macaron] 2019-02-14 01:36:57: Started POST /api/cfg/metric/convmodes/ for 172.18.0.1
+[Macaron] [1;32m2019-02-14 01:36:57: Completed /api/cfg/metric/convmodes/ 200 OK in 2.435578ms[0m
+[Macaron] 2019-02-14 02:16:35: Started GET /api/cfg/snmpdevice for 172.18.0.1
+[Macaron] [4;31m2019-02-14 02:16:35: Completed /api/cfg/snmpdevice 403 Forbidden in 4.289597ms[0m
+[Macaron] 2019-02-14 02:16:35: Started GET /api/rt/agent/info/version/ for 172.18.0.1
+[Macaron] [1;32m2019-02-14 02:16:35: Completed /api/rt/agent/info/version/ 200 OK in 5.18168ms[0m
+[Macaron] 2019-02-14 02:16:41: Started POST /login for 172.18.0.1
+[Macaron] [1;32m2019-02-14 02:16:41: Completed /login 200 OK in 6.737145ms[0m
+[Macaron] 2019-02-14 02:16:41: Started GET /api/rt/agent/info/version/ for 172.18.0.1
+[Macaron] [1;32m2019-02-14 02:16:41: Completed /api/rt/agent/info/version/ 200 OK in 2.480435ms[0m
+[Macaron] 2019-02-14 02:16:41: Started GET /api/rt/device/info for 172.18.0.1
+[Macaron] [1;32m2019-02-14 02:16:41: Completed /api/rt/device/info 200 OK in 4.608717ms[0m
+[Macaron] 2019-02-14 02:16:44: Started GET /api/cfg/snmpdevice for 172.18.0.1
+[Macaron] [1;32m2019-02-14 02:16:44: Completed /api/cfg/snmpdevice 200 OK in 9.658699ms[0m
+[Macaron] 2019-02-14 02:16:45: Started GET /api/cfg/influxservers for 172.18.0.1
+[Macaron] 2019-02-14 02:16:45: Started GET /api/cfg/measgroup for 172.18.0.1
+[Macaron] 2019-02-14 02:16:45: Started GET /api/cfg/measfilters for 172.18.0.1
+[Macaron] 2019-02-14 02:16:45: Started GET /api/cfg/varcatalog for 172.18.0.1
+[Macaron] [1;32m2019-02-14 02:16:45: Completed /api/cfg/influxservers 200 OK in 8.633433ms[0m
+[Macaron] [1;32m2019-02-14 02:16:45: Completed /api/cfg/measgroup 200 OK in 10.804827ms[0m
+[Macaron] [1;32m2019-02-14 02:16:45: Completed /api/cfg/measfilters 200 OK in 13.88068ms[0m
+[Macaron] [1;32m2019-02-14 02:16:45: Completed /api/cfg/varcatalog 200 OK in 17.40775ms[0m
+[Macaron] 2019-02-14 02:17:57: Started POST /api/rt/agent/snmpconsole/ping/ for 172.18.0.1
+[Macaron] 2019-02-14 02:18:17: Completed /api/rt/agent/snmpconsole/ping/ 400 Bad Request in 20.032398058s
+[Macaron] 2019-02-14 02:18:44: Started POST /api/rt/agent/snmpconsole/ping/ for 172.18.0.1
+[Macaron] 2019-02-14 02:19:04: Completed /api/rt/agent/snmpconsole/ping/ 400 Bad Request in 20.033610951s

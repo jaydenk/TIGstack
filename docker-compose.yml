@@ -1,0 +1,66 @@
+version: "3.5"
+
+networks:
+  influx:
+
+volumes:
+  grafana-storage:
+
+services:
+  influxdb:
+    container_name: influxdb
+    image: influxdb
+    networks:
+      - influx
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./influxdb:/var/lib/influxdb
+    restart: always
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - influx
+    environment:
+      - "GF_SECURITY_ADMIN_PASSWORD=admin"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    restart: always
+
+  telegraf:
+    container_name: telegraf
+    image: telegraf
+    networks:
+      - influx
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      - ./telegraf/conf:/etc/telegraf/telegraf.d
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./mibs:/usr/share/snmp/mibs
+    restart: always
+
+#  easy_influx:
+#    container_name: easy_influx
+#    image: bendews/easyinflux
+#    networks:
+#      - influx
+#    volumes:
+#      - ./config.yaml:/config/config.yaml
+#      - ./vmw:/usr/share/snmp/mibs
+#    restart: always
+
+#  snmp_collector:
+#    container_name: snmp_collector
+#    image: tonimoreno/snmpcollector
+#    networks:
+#      - influx
+#    ports:
+#      - "9090:9090"
+#    volumes:
+#      - ./snmpcol/conf:/opt/snmpcollector/conf
+#      - ./snmpcol/logs:/opt/snmpcollector/log
+#    restart: always
