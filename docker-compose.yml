@@ -2,6 +2,7 @@ version: "3.5"
 
 networks:
   influx:
+  zabbix:
 
 volumes:
   grafana-storage:
@@ -43,24 +44,16 @@ services:
       - ./mibs:/usr/share/snmp/mibs
     restart: always
 
-#  easy_influx:
-#    container_name: easy_influx
-#    image: bendews/easyinflux
-#    networks:
-#      - influx
-#    volumes:
-#      - ./config.yaml:/config/config.yaml
-#      - ./vmw:/usr/share/snmp/mibs
-#    restart: always
-
-#  snmp_collector:
-#    container_name: snmp_collector
-#    image: tonimoreno/snmpcollector
-#    networks:
-#      - influx
-#    ports:
-#      - "9090:9090"
-#    volumes:
-#      - ./snmpcol/conf:/opt/snmpcollector/conf
-#      - ./snmpcol/logs:/opt/snmpcollector/log
-#    restart: always
+  zabbix-server:
+    container_name: zabbix-server
+    image: zabbix/zabbix-server-mysql
+    restart: always
+    networks:
+      - zabbix
+      - influx
+    depends_on:
+      - zabbix-mysql-server
+    volumes:
+      - zabbix:/usr/lib/zabbix
+    environment:
+      -
