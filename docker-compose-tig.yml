@@ -1,0 +1,60 @@
+version: "3.5"
+
+networks:
+  influx:
+    name: influx
+  traefik:
+    external:
+      name: traefik
+
+volumes:
+  grafana-storage:
+
+services:
+  influxdb:
+    container_name: influxdb
+    image: influxdb
+    networks:
+      - influx
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./influxdb:/var/lib/influxdb
+    restart: always
+    labels:
+      - "traefik.enable=false"
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - influx
+      - traefik
+    environment:
+      - "GF_SECURITY_ADMIN_PASSWORD=admin"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=monitor"
+      - "traefik.frontend.rule=Host:monitor.cornerstone.sa.edu.au"
+      - "traefik.docker.network=traefik"
+      - "traefik.port=3000"
+
+  telegraf:
+    container_name: telegraf
+    image: telegraf
+    networks:
+      - influx
+    volumes:
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      - ./telegraf/conf:/etc/telegraf/telegraf.d
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./mibs:/usr/share/snmp/mibs
+    restart: always
+    command: sh -c "sleep 5 && telegraf --config /etc/telegraf/telegraf.conf --config-directory /etc/telegraf/telegraf.d"
+    labels:
+      - "traefik.enable=false"

@@ -1,0 +1,21 @@
+version: "3.5"
+
+networks:
+  traefik:
+    name: traefik
+
+services:
+  reverse-proxy: # The reverse proxy service (Traefik)
+    image: traefik  # The official Traefik docker image
+    networks:
+      - traefik
+    ports:
+      - "80:80"      # The HTTP port
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # So that Traefik can listen to the Docker events
+      - ./traefik/traefik.toml:/etc/traefik/traefik.toml:ro
+      - ./ssl:/etc/traefik/ssl:ro
+    labels:
+      - "traefik.frontend.rule=Host:traefik.cornerstone.sa.edu.au"
+      - "traefik.port=8081"

@@ -11,3 +11,5 @@ Thumbs.db
 # Repo specific #
 #################
 influxdb/
+ssl/
+zabbix/
