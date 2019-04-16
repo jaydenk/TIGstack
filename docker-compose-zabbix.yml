@@ -7,9 +7,11 @@ networks:
   traefik:
     external:
       name: traefik
+  zabbix:
 
 volumes:
   grafana-storage:
+  zabbix:
 
 services:
 
@@ -19,13 +21,16 @@ services:
     networks:
       - influx
       - traefik
+      - zabbix
     restart: always
     ports:
+      - "10050:10050"
       - "10051:10051"
     volumes:
       - ./mibs:/var/lib/zabbix/mibs
       - ./zabbix/db:/var/lib/mysql
-      - ./zabbix:/usr/lib/zabbix
+      - zabbix:/usr/lib/zabbix
+      - ./zabbix/zabbix_server.conf:/etc/zabbix/zabbix_server.conf
     environment:
       - ZBX_DEBUGLEVEL=1
       - ZBX_HOUSEKEEPINGFREQUENCY=1
@@ -39,3 +44,23 @@ services:
       - "traefik.backend=zabbix"
       - "traefik.frontend.rule=Host:zabbix.cornerstone.sa.edu.au"
       - "traefik.docker.network=traefik"
+
+  zabbix-agent:
+    container_name: zabbix_server_agent
+    image: zabbix/zabbix-agent
+    networks:
+      - zabbix:
+    hostname: zabbix_server_agent
+    ports:
+      - "10054:10054"
+      - "10055:10055"
+    restart: always
+    volumes:
+      - ./zabbix/zabbix_agentd.conf:/etc/zabbix/zabbix_agentd.conf
+    privileged: true
+    environment:
+      - ZBX_HOSTNAME=Zabbix_Server_Agent
+      - ZBX_PASSIVESERVERS=zabbix
+      - ZBX_ACTIVESERVERS=zabbix
+    labels:
+      - "traefik.enable=false"

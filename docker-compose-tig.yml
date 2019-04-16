@@ -20,6 +20,7 @@ services:
       - "8086:8086"
     volumes:
       - ./influxdb:/var/lib/influxdb
+      - ./influxdb.conf:/etc/influxdb/influxdb.conf
     restart: always
     labels:
       - "traefik.enable=false"
@@ -39,8 +40,8 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=monitor"
-      - "traefik.frontend.rule=Host:monitor.cornerstone.sa.edu.au"
+      - "traefik.backend=dashboard"
+      - "traefik.frontend.rule=Host:dashboard.cornerstone.sa.edu.au"
       - "traefik.docker.network=traefik"
       - "traefik.port=3000"
 
@@ -55,6 +56,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./mibs:/usr/share/snmp/mibs
     restart: always
-    command: sh -c "sleep 5 && telegraf --config /etc/telegraf/telegraf.conf --config-directory /etc/telegraf/telegraf.d"
     labels:
       - "traefik.enable=false"
+    command: sh -c "sleep 5 && telegraf --config /etc/telegraf/telegraf.conf --config-directory /etc/telegraf/telegraf.d"
+    command: sh -c "defaultGateway="$$(ip route | grep default | awk '{print $$3}')""
